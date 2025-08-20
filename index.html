@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Nolan's Home</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 800px;
+      overflow: hidden;
+    }
+    header {
+      background: #4a6fa5;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: 600;
+    }
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #4a6fa5;
+      margin-bottom: 15px;
+    }
+    .bio {
+      text-align: center;
+      color: #555;
+      line-height: 1.6;
+      padding: 0 20px;
+      font-size: 1.1em;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      justify-content: center;
+      gap: 15px;
+    }
+    .link-item {
+      background: #f0f4f8;
+      border: 1px solid #d0d8e8;
+      padding: 14px 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 130px;
+      font-weight: 500;
+      color: #333;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .link-item:hover {
+      background: #4a6fa5;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      font-size: 0.9em;
+      background: #f8f9fa;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Welcome Home, Nolan</h1>
+    </header>
+
+    <!-- Profile Section -->
+    <div class="profile">
+      <img src="images/xn.jpg" alt="Nolan's Photo" id="profile-photo">
+      <div class="bio">
+        <p>
+          Hi, I'm <strong>Nolan</strong>, a student at <strong>New York University (NYUSH)</strong>.<br>
+          I'm passionate about technology, design, and learning new things.
+        </p>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="links">
+      <a href="https://drive.google.com/" class="link-button">Google Drive</a>
+      <a href="https://gmail.com/" class="link-button">Gmail</a>
+      <a href="https://home.nyu.edu/" class="link-button">NYU Home</a>
+      <a href="https://google.com/" class="link-button">Google</a>
+      <a href="https://gemini.google.com/" class="link-button">Gemini</a>
+      <a href="https://chat.qwen.ai/" class="link-button">ChatQuwen AI</a>
+      <a href="https://github.com/" class="link-button">Github</a>
+      <a href="https://nolan180940.github.io/Notebook/" class="link-button">Notebook</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      © 2025 Nolan | Built with ❤️
+    </footer>
+  </div>
+
+  <script>
+    // 可选：动态加载真实照片（如从 GitHub 或图床）
+    // document.getElementById('profile-photo').src = "your-photo-url.jpg";
+  </script>
+</body>
+</html>
