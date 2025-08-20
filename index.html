@@ -20,8 +20,8 @@
       background: white;
       border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 800px;
+      width: 95%;
+      max-width: 1000px; /* 修改：增大最大宽度 */
       overflow: hidden;
     }
     header {
@@ -89,6 +89,10 @@
       background: #f8f9fa;
       border-top: 1px solid #eee;
     }
+    .time-display {
+      margin-top: 10px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -112,25 +116,39 @@
 
     <!-- Quick Links -->
     <div class="links">
-      <a href="https://drive.google.com/" class="link-button">Google Drive</a>
-      <a href="https://gmail.com/" class="link-button">Gmail</a>
-      <a href="https://home.nyu.edu/" class="link-button">NYU Home</a>
-      <a href="https://google.com/" class="link-button">Google</a>
-      <a href="https://gemini.google.com/" class="link-button">Gemini</a>
-      <a href="https://chat.qwen.ai/" class="link-button">ChatQuwen AI</a>
-      <a href="https://github.com/" class="link-button">Github</a>
-      <a href="https://nolan180940.github.io/Notebook/" class="link-button">Notebook</a>
+      <a href="https://drive.google.com/" class="link-item">Google Drive</a>
+      <a href="https://gmail.com/" class="link-item">Gmail</a>
+      <a href="https://home.nyu.edu/" class="link-item">NYU Home</a>
+      <a href="https://google.com/" class="link-item">Google</a>
+      <a href="https://gemini.google.com/" class="link-item">Gemini</a>
+      <a href="https://chat.qwen.ai/" class="link-item">ChatQuwen AI</a>
+      <a href="https://github.com/" class="link-item">Github</a>
+      <a href="https://nolan180940.github.io/Notebook/" class="link-item">Notebook</a>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer with Real-time Clock -->
     <footer>
       © 2025 Nolan | Built with ❤️
+      <div class="time-display" id="current-time"></div>
     </footer>
   </div>
 
   <script>
     // 可选：动态加载真实照片（如从 GitHub 或图床）
     // document.getElementById('profile-photo').src = "your-photo-url.jpg";
+
+    // 添加实时时间功能
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('zh-CN'); // 使用中文格式
+      document.getElementById('current-time').textContent = timeString;
+    }
+
+    // 页面加载完成后立即显示时间，并设置每秒更新一次
+    window.onload = function() {
+      updateTime(); // 立即显示
+      setInterval(updateTime, 1000); // 每秒更新
+    };
   </script>
 </body>
 </html>
